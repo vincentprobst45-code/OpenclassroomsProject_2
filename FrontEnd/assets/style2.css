@@ -1,0 +1,21 @@
+.filters-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap:20px;
+}
+.filters-container button{
+    border-radius: 60px;
+    border: 1px solid rgba(29, 97, 84, 1);
+    padding:10px;
+    min-width: 100px;
+    color:rgba(29, 97, 84, 1);
+    background-color: rgba(255, 254, 248, 1);;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Syne';
+}
+.filters-container button:hover{
+    background-color: rgba(29, 97, 84, 1);
+    color: white;
+}
