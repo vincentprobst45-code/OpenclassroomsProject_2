@@ -19,3 +19,75 @@
     background-color: rgba(29, 97, 84, 1);
     color: white;
 }
+#connexion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    margin-top: 130px;
+}
+#connexion label {
+    display: block;
+    font-weight: 500;
+    padding-top: 20px;
+}
+#connexion div input{
+    width: 379px;
+    height: 51px;
+box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+border: none;
+}
+#connexion form > input{
+    border: none;
+    padding: 12px 40px;
+    width: auto;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+#connexion form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* #connexion > *{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}*/
+#connexion div *{
+    margin-top: 10px;
+} 
+#connexion a{
+    color: #222222;
+}
+.login-error-message{
+    display: none;
+    font-size: 30px;
+    font-weight: 700;
+}
+.display-important{
+    display: block !important;
+}
+.display-none-important{
+    display: none !important;
+}
+.display-inline-important{
+    display: inline !important;
+}
+#edit-mode-banner{
+    background-color: black;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    display: none;
+}
+#logout-link{
+    display: none;
+}
+#edit-mode-project-modify-button{
+    display: none;
+    background-color: transparent;
+    border: none;
+}

@@ -40,3 +40,12 @@ document.querySelectorAll(".filters-container button").forEach((button) => {butt
         filterByCategory(text)
     })
 })
+
+const token = localStorage.getItem("token")
+if(token)
+{
+    document.getElementById("login-link").classList.add("display-none-important")
+    document.getElementById("logout-link").classList.add("display-important")
+    document.getElementById("edit-mode-banner").classList.add("display-important")
+    document.getElementById("edit-mode-project-modify-button").classList.add("display-inline-important")
+}
