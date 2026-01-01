@@ -74,6 +74,9 @@ border: none;
 .display-inline-important{
     display: inline !important;
 }
+.display-flex-important{
+    display: flex !important;
+}
 #edit-mode-banner{
     background-color: black;
     width: 100%;
@@ -90,4 +93,78 @@ border: none;
     display: none;
     background-color: transparent;
     border: none;
+}
+
+.action-button{
+    border: none;
+    padding: 12px 40px;
+    width: auto;
+    margin-bottom: 5px;
+    font-size: 14px;
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	text-align: center;
+	border-radius: 60px ;
+}
+#edit-mode-div{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #22222299;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#edit-gallery-panel{
+    width: 630px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#edit-mode-div h2{
+    font-family: Work-Sans;
+    font-size: 26px;
+    font-weight: 400;
+    color: black;
+}
+#edit-panel-close-button{
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: none;
+    background-color: white;
+}
+#photos-edit-panel{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    padding: 50px 0;
+    margin: 0 50px;
+    justify-content: flex-start;
+    border-bottom: 1px solid #B3B3B3;
+}
+#edit-mode-div img{
+    width: 100%;
+    height: 120px;
+}
+#edit-mode-div figure{
+    position: relative;
+    width: 17%;
+}
+#edit-mode-div figure button{
+    position: absolute;
+    top:5px;
+    right:5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
 }

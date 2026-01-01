@@ -17,7 +17,19 @@ async function displayWorks(paramWorks) {
                 <figcaption>${work.title}</figcaption>
                 </figure>`)
         });
-    document.getElementById('portfolio').querySelector('.gallery').innerHTML = htmlString
+    document.getElementById('portfolio').querySelector('.gallery').innerHTML = htmlString    
+}
+async function displayWorksInEditPanel(paramWorks) {
+    let htmlString = ''
+    const works = [...paramWorks]
+        works.forEach(work => {
+            htmlString = htmlString.concat(`<figure>
+                <img src="${work.imageUrl}" alt="${work.title}" data-id="${work.id}">
+                <button><i class="fa-solid fa-trash-can"></i></button>
+                </figure>`)
+        });
+    document.getElementById('photos-edit-panel').innerHTML = htmlString
+    
 }
 function filterByCategory(category){
     if(category != "Tous")
@@ -49,3 +61,17 @@ if(token)
     document.getElementById("edit-mode-banner").classList.add("display-important")
     document.getElementById("edit-mode-project-modify-button").classList.add("display-inline-important")
 }
+
+document.getElementById("edit-mode-project-modify-button").addEventListener("click", () => {
+    document.getElementById("edit-mode-div").classList.add("display-flex-important")
+    displayWorksInEditPanel(works)
+})
+document.getElementById("edit-panel-close-button").addEventListener("click", () => {
+    document.getElementById("edit-mode-div").classList.remove("display-flex-important")
+})
+document.getElementById("edit-mode-div").addEventListener("click", (e) => {
+    if (e.target === document.getElementById("edit-mode-div"))
+    {
+        document.getElementById("edit-mode-div").classList.remove("display-flex-important")
+    }
+})
