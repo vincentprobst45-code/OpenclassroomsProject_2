@@ -124,7 +124,14 @@ border: none;
 #edit-gallery-panel{
     width: 630px;
     background-color: white;
+}
+#edit-gallery-page-1{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#edit-gallery-page-2{
+    display: none;
     flex-direction: column;
     align-items: center;
 }
@@ -134,10 +141,14 @@ border: none;
     font-weight: 400;
     color: black;
 }
-#edit-panel-close-button{
-    margin-left: auto;
-    margin-right: 20px;
-    margin-top: 20px;
+.edit-panel-close-button{
+    float: right;
+}
+.edit-panel-nav-buttons-container{
+    width: 100%;
+}
+.edit-panel-button{
+    margin:20px;
     border: none;
     background-color: white;
 }
@@ -167,4 +178,38 @@ border: none;
     border-radius: 5px;
     border: none;
     padding: 5px;
+}
+#edit-gallery-page-2 label {
+    display: block;
+    font-weight: 500;
+    padding-top: 20px;
+}
+#edit-gallery-page-2 div input{
+    width: 379px;
+    height: 51px;
+box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+border: none;
+}
+#edit-gallery-page-2 form > input{
+    border: none;
+    padding: 12px 40px;
+    width: auto;
+    font-size: 14px;
+}
+#edit-gallery-page-2 form{
+    display: flex;
+    flex-direction: column;
+}
+#drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  max-width: 100%;
+  height: 200px;
+  padding: 1em;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: slategray;
+  cursor: pointer;
 }

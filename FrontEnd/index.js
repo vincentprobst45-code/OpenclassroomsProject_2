@@ -64,14 +64,25 @@ if(token)
 
 document.getElementById("edit-mode-project-modify-button").addEventListener("click", () => {
     document.getElementById("edit-mode-div").classList.add("display-flex-important")
+    document.getElementById("edit-gallery-page-1").classList.remove("display-none-important")
+    document.getElementById("edit-gallery-page-2").classList.remove("display-flex-important")
     displayWorksInEditPanel(works)
 })
-document.getElementById("edit-panel-close-button").addEventListener("click", () => {
-    document.getElementById("edit-mode-div").classList.remove("display-flex-important")
+document.querySelectorAll(".edit-panel-close-button").forEach((button) => {button.addEventListener("click", () => {
+        document.getElementById("edit-mode-div").classList.remove("display-flex-important")
+    })
 })
 document.getElementById("edit-mode-div").addEventListener("click", (e) => {
     if (e.target === document.getElementById("edit-mode-div"))
     {
         document.getElementById("edit-mode-div").classList.remove("display-flex-important")
     }
+})
+document.getElementById("add-photo-button").addEventListener("click", (e) => {
+        document.getElementById("edit-gallery-page-1").classList.add("display-none-important")
+        document.getElementById("edit-gallery-page-2").classList.add("display-flex-important")
+})
+document.getElementById("edit-panel-back-button").addEventListener("click", (e) => {
+        document.getElementById("edit-gallery-page-1").classList.remove("display-none-important")
+        document.getElementById("edit-gallery-page-2").classList.remove("display-flex-important")
 })
