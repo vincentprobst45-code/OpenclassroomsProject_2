@@ -18,15 +18,11 @@ async function login(formData){
             localStorage.setItem("token",token)
             window.location.href = "./index.html";
         } else{
-            console.log("pasok")
             document.querySelector(".login-error-message").classList.add("display-important")
         }
     }
     catch(error){
-        console.log("deeeeeee")
-        console.log("dzdzd")
         console.log(error)
-        console.log("mdr")
     }
 }
 const form = document.getElementById("login-form")

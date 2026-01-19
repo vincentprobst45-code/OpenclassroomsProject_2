@@ -91,19 +91,25 @@
 					<button class="edit-panel-close-button edit-panel-button"><i class="fa-solid fa-xmark"></i></button>
 				</div>
 				<h2>Ajout Photo</h2>
-				<form id ="login-form" action="#" method="post">
-					<label id="drop-zone">
-  Drop images here, or click to upload.
-  <input type="file" id="file-input" multiple accept="image/*" />
-</label>
-        		    <div>
-					    <label for="titre">E-mail</label>
-					    <input type="text" name="titre" id="titre">
-        		    </div>
-        		    <div>
-					    <label for="categorie">Mot de passe</label>
-					    <input type="text" name="categorie" id="categorie">
-        		    </div>
+				<form id ="add-work-form" action="#" method="post">
+					<div id="form-inputs-container">
+						<label id="drop-zone">
+						  <i class="fa-regular fa-image image-placeholder"></i>
+					  <button type="button" id="add-image-file-button"><input type="file" id="file-input" name="image" accept=".png,.jpg,.jpeg" />+ Ajouter photo</button>
+					  <p>jpg, png : 4mo max</p>
+					  <ul id="preview" class="preview-list" aria-live="polite"></ul>
+						</label>
+					  	<p id="drop-error" class="error-message" aria-live="polite"></p>
+        		    	<div>
+						    <label for="titre">Titre</label>
+						    <input type="text" name="title" id="titre">
+        		    	</div>
+        		    	<div>
+						    <label for="categorie">Catégorie</label>
+						    <select name="category" id="edit-select-categorie" form="add-work-form">
+							</select>
+        		    	</div>
+					</div>
 					<input type="submit" value="Valider">
 				</form>
 			</div>
